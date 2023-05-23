@@ -6,6 +6,8 @@
 }
 body{
     background-color: var(--bg-one);
+    width: 100vw;
+    height: 100vh;
     transition: 0.3s;
 }
 h1{
@@ -84,7 +86,7 @@ h1{
     transition: 0.3s;
 }
 .bored{
-    height: 27.5rem;
+    height: 23.5rem;
     width: 38.5rem;
     position: relative;
     margin: 12px;
@@ -110,9 +112,23 @@ h1{
     border-bottom: 4px solid var(--bg-three);
     transition: 0.3s;
 }
-
-  
 @media screen and (max-height: 450px) {
     .sided {padding-top: 15px;}
     .sided a {font-size: 18px;}
+}
+
+.help{
+    position: relative;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+}
+.help h2{
+    border-bottom: 3px solid var(--bg-three);
+    animation: idle 5s infinite ease-in-out;
+    text-align: center;
+}
+@keyframes idle{
+    50%{border-bottom: 3px solid transparent;};
 }

@@ -35,13 +35,13 @@
     <h1>Question hub</h1>
     <form class="main" action="<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
         <div class="quest">
-            <input class="put" type="text" name="title" placeholder="Enter a title">
+            <input class="put" type="text" name="title" placeholder="Enter a title to represent your question">
             <textarea class="question-input" name="question" placeholder="Enter your question"></textarea>
             <input class="sub" type="submit" name="submitq" value="Submit question">
         </div>
     </form>
     <div class="enu">
-        <button class="menu" name="profile" onclick="location.href='profile.php' ">Profile</button>
+        <!--<button class="menu" name="profile" onclick="location.href='profile.php' ">Profile</button>-->
         <button class="menu" name="home" onclick="location.href='home.php' ">Home</button>
     </div>
     <script src="themes.js"></script>

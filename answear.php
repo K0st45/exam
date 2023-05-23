@@ -39,7 +39,7 @@
     <h1>Answer hub</h1>
     <form class="main" action="<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
         <div class="answ">
-            <textarea class="answer-input" name="answer" placeholder="To answer..."></textarea>
+            <textarea class="answer-input" name="answer" placeholder="Do you have an answer?"></textarea>
             <input class="sub" type="submit" name="submitq" value="Submit answer">
         </div>
     </form>

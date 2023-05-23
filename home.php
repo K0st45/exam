@@ -69,7 +69,7 @@ if(isset($_POST["questions"])){
     </div>
     <form class="forne" action="<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
         <div class="search-bar">
-            <input type="text" class="search-input" name="search-input" placeholder="Search">
+            <input type="text" class="search-input" name="search-input" placeholder="Search a user, a title or a question">
             <button class="search-button" name="submit">
                 <span class="material-symbols-outlined">search</span>
             </button>
@@ -78,7 +78,7 @@ if(isset($_POST["questions"])){
         <button class="menu" name="profile">Profile</button>
         <button class="menu" name="logout">Logout</button>
     </form> 
-    <button id="theme" class="menu" name="theme" onclick="toggleTheme()">Change theme</button>
+    <button id="theme" class="menu" name="theme" onclick="toggleTheme()">Change Cosmo</button>
     
     <div class="quest">
         <?php
