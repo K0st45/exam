@@ -42,7 +42,6 @@
     </form>
     <div class="enu">
         <button class="menu" name="profile" onclick="location.href='profile.php' ">Profile</button>
-        <button class="menu" name="theme" onclick="toggleTheme()">Theme</button>
         <button class="menu" name="home" onclick="location.href='home.php' ">Home</button>
     </div>
     <script src="themes.js"></script>
@@ -66,7 +65,10 @@
         $sql = "INSERT INTO question_data (username, title, question)
                 VALUES ('$username', '$title', '$question')";
 
-        mysqli_query($conn, $sql);
+            mysqli_query($conn, $sql);
+            echo "<p class='pop'>Your question has been posted!</p>";
+
+
         }
         
     }

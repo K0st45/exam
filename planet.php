@@ -31,7 +31,7 @@
     <script src="side.js"></script>
 </head>
 <body>
-    <h1>Welcome to our website</h1>
+    <h1>Welcome to CosmoConnect</h1>
     <div id="ase" class="nod">
         <button class="rol" onclick="location.href='login.php'">Log In</button>
         <button class="rol" onclick="location.href='singup.php'">Sing Up</button>

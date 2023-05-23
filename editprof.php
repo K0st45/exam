@@ -105,11 +105,14 @@
         else {
             echo "Error updating record: " . mysqli_error($conn);
         }
-        if (mysqli_query($conn, $sql2)) {
-            echo "Record updated successfully";
-        } 
-        else {
-            echo "Error updating record: " . mysqli_error($conn);
+        if(!empty($sql2)){
+
+            if (mysqli_query($conn, $sql2)) {
+                echo "Record updated successfully";
+            } 
+            else {
+                echo "Error updating record: " . mysqli_error($conn);
+            }
         }
         
         $sql = "SELECT * FROM personal_data WHERE email = '{$_SESSION['email']}'";

@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: var(--bg-four);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+.light-theme{
+    --bg-one: #FFFFFF;
+    --bg-two: #BAE8E8;
+    --bg-three: #43D8C9;
+    --bg-four: #272343;
+}
+.dark-theme{
+    --bg-one: #1a1c22;
+    --bg-two: #3d3a50;
+    --bg-three: #580ef6;
+    --bg-four: #f7f7f7;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to right, var(--bg-one) , var(--bg-two));
+    overflow-x: hidden;
+}
+.menu{
+    position: absolute;
+    top: 30px;
+    right: 15px;
+}
+h1{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--bg-four);
+}
+.btn1{
+    position: relative;
+    margin: 1em 0.5em 1em 0.5em;
+    padding: 0.5em 1em 0.5em 1em;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 1.2rem;
+    border: none;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid transparent;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.btn1:hover{
+    border-bottom: 3px solid var(--bg-three);
+    border-top: 3px solid var(--bg-three);
+}
+.qnaarea{
+    position: relative;
+    top: 20%;
+    height: fit-content;
+    width: 40%;
+}
+.qna{
+    position: relative;
+    top: 20%;
+    left: 20px;
+    height: fit-content;
+    width: 100%;
+}
+.ans{
+    position: relative;
+    top: 50%;
+    left: 20px;
+    height: fit-content;
+    width: 100%;
+}
+.answers{
+    margin-bottom: 15px;
+    border-bottom: solid var(--bg-three);
+    animation: idle 5s infinite ease-in-out;
+}
+@keyframes idle{
+    50%{border-bottom: 2px solid transparent;}
+}
+.answ{
+    width: 700px;
+    position: absolute;
+    right: 5%;
+    top: 20%;
+}
+.answer-input {
+    width: 100%;
+    height: 200px; /* Adjust the height as needed */
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border: 1px solid var(--bg-two);
+    border-radius: 5px;
+    resize: none; /* Disable vertical resizing */
+    transition: border-color 0.2s, box-shadow 0.3s; /* Add transition for border and box-shadow */
+    outline: none;
+    color: #000;
+}
+.answer-input:focus {
+    border-color: var(--bg-three); /* Change border color on focus */
+    box-shadow: 0 0 7px var(--bg-three); /* Add box shadow on focus */
+}
+.sub{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 1em 0.5em 1em 0.5em;
+    padding: 0.5em 1em 0.5em 1em;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 1.2rem;
+    border: none;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid transparent;
+    border-radius: 10px;
+    color: var(--bg-four);
+    transition: 0.3s;
+}
+.sub:hover{
+    border-bottom: 3px solid var(--bg-three);
+    border-top: 3px solid var(--bg-three);
+}
+.pip{
+    position: relative;
+    left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.pop{
+    position: absolute;
+    top: 15%;
+    right: 13%;
+}

@@ -221,3 +221,57 @@ if($_SESSION['id'] == 1){
                 }
 
             ?>  
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+<div>
+        <?php
+            $sql = "SELECT * FROM answer_data WHERE title = '$title' ";
+            $result = mysqli_query($conn, $sql);
+            $row = mysqli_fetch_assoc($result);
+
+            $ans = $row["answer"];
+
+            echo $ans;
+        ?>
+    </div>
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+<div class="wrapper">
+        <div class="left">
+            <img src="profilepic01.jpg" alt="user" width="100">
+            <h4><?php echo "{$_SESSION['lastname']}, {$_SESSION['firstname']}"; ?></h4>
+            <p><?php echo "{$_SESSION['username']}"; ?></p>
+        </div>
+        <div class="right">
+            <div class="info">
+                <h3>Information</h3>
+                <div class="info_data">
+                    <div class="data">
+                        <h4>Email</h4>
+                        <p><?php echo "{$_SESSION['email']}"; ?></p>
+                    </div>
+                    <div class="data">
+                    <h4>Phone</h4>
+                        <p>0001-213-998761</p>
+                    </div>
+                </div>
+            </div>
+      
+            <div class="projects">
+                <h3>Projects</h3>
+                <div class="projects_data">
+                    <div class="data">
+                        <h4>Recent</h4>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div class="data">
+                        <h4>Most Viewed</h4>
+                        <p>dolor sit amet.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+------------------------------------------------------------------------------------------------------------
