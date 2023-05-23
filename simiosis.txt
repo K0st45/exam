@@ -1,0 +1,223 @@
+<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+------------------------------------------------------------------------------------------------
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+  
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+----------------------------------------------------------------------------------------------------
+
+<?php
+// Check if the 'theme' cookie is set
+if (isset($_COOKIE['theme'])) {
+    $theme = $_COOKIE['theme'];
+} else {
+    // If the cookie is not set, default to the light theme
+    $theme = 'light';
+}
+
+if ($theme === 'dark') {
+    // If the 'theme' cookie is set to 'dark', use the dark theme
+    echo "<body class='dark-theme'>";
+} else {
+    // Otherwise, use the light theme
+    echo "<body class='light-theme'>";
+}
+?>
+
+<button onclick="toggleTheme()">Toggle Theme</button>
+
+<script>
+function toggleTheme() {
+    // Get the <body> element
+    var body = document.querySelector('body');
+    // Check if the body has the 'dark-theme' class
+    var isDark = body.classList.contains('dark-theme');
+    // Toggle the 'dark-theme' and 'light-theme' classes
+    body.classList.toggle('dark-theme', !isDark);
+    body.classList.toggle('light-theme', isDark);
+    // Set the 'theme' cookie to the opposite of the current value
+    document.cookie = "theme=" + (isDark ? "light" : "dark") + "; path=/";
+}
+</script>
+
+-----------------------------------------------------------------------------------------------------------
+
+<style>
+.light-theme {
+    background-color: #fff;
+    color: #333;
+}
+
+.dark-theme {
+    background-color: #333;
+    color: #fff;
+}
+</style>
+
+-----------------------------------------------------------------------------------------------------------
+
+function openNav() {
+    document.getElementById("mySidenav").style.width = "650px";
+}
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+----------------------------------------------------------------------------------------------------------
+
+service apache2 start
+service mysql start
+
+usnm: phpmyadmin
+psswrd: stamkost
+
+
+<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?>  einai to action sto form..
+
+
+
+if($_SESSION['id'] == 1){
+            echo "<script>";
+            echo "  var div1 = document.getElementById('ase');";
+            echo "  var div2 = document.getElementById('sary');";
+            echo "  div1.style.visibility = 'hidden';";
+            echo "  div2.style.visibility = 'visible';";
+            echo "</script>";
+        }
+        else{
+            echo "<script>";
+            echo "  var div1 = document.getElementById('ase');";
+            echo "  var div2 = document.getElementById('sary');";
+            echo "  div1.style.visibility = 'visible';";
+            echo "  div2.style.visibility = 'hidden';";
+            echo "</script>";
+        }
+        
+
+        if(isset($_POST["logout"])){
+            session_destroy();
+        }
+
+-----------------------------------------------------------------------------------------------
+<?php
+    session_destroy();
+
+    header("location: kati.php");
+?>
+
+-------------------------------------------------------------------------------------------------
+
+    <form class="forne" action="<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
+        <button class="menu" name="questions">Questions</button>
+        <button class="menu" name="profile">Profile</button>
+        <button class="menu" name="theme" onclick="toggleTheme()">Theme</button>
+        <button class="menu" name="logout">Logout</button>
+        <div class="search-bar">
+            <input type="text" class="search-input" placeholder="Search">
+            <button class="search-button">
+                <span class="material-symbols-outlined">search</span>
+            </button>
+        </div>
+    </form>
+
+.menu{
+    position: relative;
+    margin: 1em 0.5em 1em 0.5em;
+    padding: 0.5em 1em 0.5em 1em;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 1.2rem;
+    border: none;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid transparent;
+    border-radius: 10px;
+    transition: 0.3s;
+
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+<?php
+                
+                 if(isset($_POST["submit"])){
+                    if(!empty($_POST["content"]) && empty($_POST["users"])){
+                        $searching = $_POST["content"];
+                        $query = "SELECT title FROM question_data WHERE title = '$searching'";
+                        $query2 = "SELECT question FROM question_data WHERE title = '$searching'";
+                        $result = mysqli_query($conn, $query);
+                        $result2 = mysqli_query($conn, $query2);
+                        while($row = mysqli_fetch_assoc($result)){
+                            $rowQuestion = mysqli_fetch_assoc($result2);
+                            $title = $row['title'];
+                            $question = $rowQuestion['question'];
+                            $linkText = "<a href='#' class='title'>$title<br><span>$question</span</a>";
+
+                            echo $linkText;
+                        }
+                    }
+                    elseif(!empty($_POST["username"]) && empty($_POST["content"])){
+                        $searching = $_POST["users"];
+                        $query = "SELECT username FROM questions WHERE username = '$searching'";
+                        $query2 = "SELECT the_question FROM questions WHERE username = '$searching'";
+                        $result = mysqli_query($conn, $query);
+                        $result2 = mysqli_query($conn, $query2);
+                        while($row = mysqli_fetch_assoc($result)){
+                            $rowQuestion = mysqli_fetch_assoc($result2);
+                            $username = $row['username'];
+                            $question = $rowQuestion['the_question'];
+                            $linkText = "<a href='#' class='title'>$username<br><span>$question</span></a>";
+
+                            echo $linkText;
+                        }
+                    }
+                    else{
+                        $searching = $_POST["users"];
+                        $query = "SELECT username FROM question_data WHERE username = '$searching'";
+                        $query2 = "SELECT question FROM question_data WHERE username = '$searching'";
+                        $result = mysqli_query($conn, $query);
+                        $result2 = mysqli_query($conn, $query2);
+                        while($row = mysqli_fetch_assoc($result)){
+                            $rowQuestion = mysqli_fetch_assoc($result2);
+                            $username = $row['username'];
+                            $question = $rowQuestion['question'];
+                            $linkText = "<a href='#' class='title'>$username<br><span>$question</span></a>";
+
+                            echo $linkText;
+                        }
+
+                        $searching = $_POST["content"];
+                        $query = "SELECT title FROM question_data WHERE title = '$searching'";
+                        $query2 = "SELECT question FROM question_data WHERE title = '$searching'";
+                        $result = mysqli_query($conn, $query);
+                        $result2 = mysqli_query($conn, $query2);
+                        while($row = mysqli_fetch_assoc($result)){
+                            $rowQuestion = mysqli_fetch_assoc($result2);
+                            $title = $row['title'];
+                            $question = $rowQuestion['question'];
+                            $linkText = "<a href='#' class='title'>$title<br><span>$question</span</a>";
+
+                            echo $linkText;
+                        }
+                    }
+                }
+
+            ?>  

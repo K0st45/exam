@@ -1,0 +1,21 @@
+body{
+	background-color:#A070A1;
+}
+
+
+h1{
+	text-align:center;
+	background-color:#FAFDCB;
+}
+
+
+form{
+	text-align:center;
+	padding-top:50px;
+}
+
+.element{
+	color:#AEE7E8;
+	padding-bottom:10px;
+	font-size:30px;
+}

@@ -1,0 +1,12 @@
+.light-theme{
+    --bg-one: #FFFFFF;
+    --bg-two: #BAE8E8;
+    --bg-three: #43D8C9;
+    --bg-four: #272343;
+}
+.dark-theme{
+    --bg-one: #1a1c22;
+    --bg-two: #3d3a50;
+    --bg-three: #580ef6;
+    --bg-four: #f7f7f7;
+}

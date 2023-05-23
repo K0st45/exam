@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: var(--bg-four);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.light-theme{
+    --bg-one: #FFFFFF;
+    --bg-two: #BAE8E8;
+    --bg-three: #43D8C9;
+    --bg-four: #272343;
+}
+.dark-theme{
+    --bg-one: #1a1c22;
+    --bg-two: #3d3a50;
+    --bg-three: #580ef6;
+    --bg-four: #f7f7f7;
+}
+body{
+    background: linear-gradient(to right, var(--bg-one) , var(--bg-two));
+}
+.lel{
+    position: absolute;
+    top: 30px;
+    right: 15px;
+}
+.lol{
+    position: relative;
+    margin: 1em 0.5em 1em 0.5em;
+    padding: 0.5em 1em 0.5em 1em;
+    transition: 0.3s;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 1.2rem;
+    border: none;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid transparent;
+    border-radius: 10px;
+}
+.lol:hover{
+    border-bottom: 3px solid var(--bg-three);
+    border-top: 3px solid var(--bg-three);
+}
+.wrapper{
+    position: absolute;
+    top: 8rem;
+    left: 3rem;
+    width: 800px;
+    height: 400px;
+    display: flex;
+}
+  
+.wrapper .left{
+    width: 30%;
+    background: linear-gradient(to right, var(--bg-three) , var(--bg-two));
+    padding: 30px 25px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    text-align: center;
+    color: #fff;
+}
+  
+.wrapper .left img{
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+  
+.wrapper .left h4{
+    margin-bottom: 10px;
+}
+  
+.wrapper .left p{
+    font-size: 12px;
+}
+  
+.wrapper .right{
+    width: 70%;
+    background: #fff;
+    padding: 30px 25px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+  
+.wrapper .right .info,
+.wrapper .right .projects{
+    margin-bottom: 60px;
+}
+  
+.wrapper .right .info h3,
+.wrapper .right .projects h3{
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #e0e0e0;
+    color: #353c4e;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+  
+.wrapper .right .info_data,
+.wrapper .right .projects_data{
+    display: flex;
+    justify-content: space-between;
+}
+  
+.wrapper .right .info_data .data,
+.wrapper .right .projects_data .data{
+    width: 45%;
+}
+  
+.wrapper .right .info_data .data h4,
+.wrapper .right .projects_data .data h4{
+    color: #353c4e;
+    margin-bottom: 5px;
+}
+  
+.wrapper .right .info_data .data p,
+.wrapper .right .projects_data .data p{
+    font-size: 13px;
+    margin-bottom: 10px;
+    color: #919aa3;
+}

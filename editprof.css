@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.light-theme{
+    --bg-one: #FFFFFF;
+    --bg-two: #BAE8E8;
+    --bg-three: #43D8C9;
+    --bg-four: #272343;
+}
+.dark-theme{
+    --bg-one: #1a1c22;
+    --bg-two: #3d3a50;
+    --bg-three: #580ef6;
+    --bg-four: #f7f7f7;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(to right, var(--bg-one) , var(--bg-two));
+}
+#edit{
+    position: relative;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+    margin-top: 3%;
+}
+.open{
+    font-size: 22px;
+    color: var(--bg-four);
+}
+
+.animated-input {
+    padding: 10px;
+    border: 2px solid var(--bg-two);
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease-in-out;
+}
+  
+.animated-input:focus {
+    outline: none;
+    border-color: var(--bg-three);
+    box-shadow: 0 0 10px var(--bg-three);
+}
+  
+.animated-input::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+}
+  
+.animated-input:focus::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+    transition: color 0.3s ease-in-out;
+}
+.btn{
+    margin-right: 0.5em;
+    padding: 0.5em 1em 0.5em 1em;
+    border-radius: 0.7em;
+    border: none;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid transparent;
+    border-radius: 10px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 1.2rem;
+    color: var(--bg-four)
+}
+.btn:hover{
+    border-bottom: 3px solid var(--bg-three);
+    border-top: 3px solid var(--bg-three);
+}
+.mnu{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+.une{
+    position: relative;
+    margin: 1em 0.5em 1em 0.5em;
+    padding: 0.5em 1em 0.5em 1em;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 1.2rem;
+    border: none;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid transparent;
+    border-radius: 10px;
+    color: var(--bg-four);
+    transition: 0.3s;
+
+}
+.une:hover{
+    border-bottom: 3px solid var(--bg-three);
+    border-top: 3px solid var(--bg-three);
+}

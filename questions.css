@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.light-theme{
+    --bg-one: #FFFFFF;
+    --bg-two: #BAE8E8;
+    --bg-three: #43D8C9;
+    --bg-four: #272343;
+}
+.dark-theme{
+    --bg-one: #1a1c22;
+    --bg-two: #3d3a50;
+    --bg-three: #580ef6;
+    --bg-four: #f7f7f7;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to right, var(--bg-one) , var(--bg-two));
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+h1{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--bg-four);
+}
+.enu{
+    position: absolute;
+    top: 30px;
+    right: 15px;
+}
+.menu{
+    position: relative;
+    margin: 1em 0.5em 1em 0.5em;
+    padding: 0.5em 1em 0.5em 1em;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 1.2rem;
+    border: none;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid transparent;
+    border-radius: 10px;
+    transition: 0.3s;
+    color: var(--bg-four);
+}
+.menu:hover{
+    border-bottom: 3px solid var(--bg-three);
+    border-top: 3px solid var(--bg-three);
+}
+.quest{
+    width: 600px;
+}
+.put {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border: 1px solid var(--bg-two);
+    border-radius: 10px;
+    transition: border-color 0.2s, box-shadow 0.3s;
+    outline: none;
+}
+  
+.put:focus {
+    border-color: var(--bg-three);
+    box-shadow: 0 0 7px var(--bg-three);
+}
+  
+.question-input {
+    width: 100%;
+    height: 200px; /* Adjust the height as needed */
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border: 1px solid var(--bg-two);
+    border-radius: 5px;
+    resize: none; /* Disable vertical resizing */
+    transition: border-color 0.2s, box-shadow 0.3s; /* Add transition for border and box-shadow */
+    outline: none;
+}
+
+.question-input:focus {
+    border-color: var(--bg-three); /* Change border color on focus */
+    box-shadow: 0 0 7px var(--bg-three); /* Add box shadow on focus */
+}
+
+.sub{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 1em 0.5em 1em 0.5em;
+    padding: 0.5em 1em 0.5em 1em;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 1.2rem;
+    border: none;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid transparent;
+    border-radius: 10px;
+    color: var(--bg-four);
+    transition: 0.3s;
+}
+.sub:hover{
+    border-bottom: 3px solid var(--bg-three);
+    border-top: 3px solid var(--bg-three);
+}
+.pop{
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--bg-four);
+    font-size: 1.1em;
+}
