@@ -44,17 +44,14 @@
     <div class="sided" id="mySidenav">
         <div class="bored">
             <span class="sed">
-            To register on our website, simply click the "Sign Up" button located in the upper right 
-            corner and complete the required fields to finalize your registration. If you already have an 
-            account, you can access it by clicking the "Log In" button adjacent to the "Sign Up" button.
-            <br>
-            As a guest visitor to our webpage, you will have the privilege of viewing questions 
-            posted by other users, albeit without the ability to provide answers or submit your 
-            own queries, as these functionalities are reserved for registered members.
-            <br>
-            By clicking the "Theme" button, you can effortlessly switch between a pristine 
-            white background and a sophisticated dark mode, catering to your visual preferences 
-            and enhancing your browsing experience.
+            Για να εγγραφείτε στην ιστοσελίδα, απλώς πατήστε το κουμπί "Sing Up" πάνω δεξιά και
+            συμπληρώστε τα πεδία για να ολοκληρώσετε την εγγραφή σας. Αν έχετε ήδη λογαριασμό,
+            δίπλα από το κουμπί "Sing Up" υπάρχει και το "Log In" ώστε να μπείτε στον λογαριασμό 
+            σας. Συνδεόντας ως επισκέπτης στην σελίδα μας, μπορείτε να δείτε τις ερωτήσεις άλλων 
+            χρηστών χωρίς να έχετε κάποιο δικό σας προφίλ, αλλά δεν μπορείτε να απαντήσετε σε 
+            κάποιο ερώτημα ή να κάνετε κάποια δική σας ερώτηση. Κάνοντας κλικ στο κουμπί "Τheme," 
+            μπορείτε να αλλάξετε το θέμα της σελίδας από λευκό σε σκούρο και αντίστροφα. Πατώντας 
+            το κουμπί "About us," μπορείτε να δείτε περισσότερες πληροφορίες σχετικά με την σελίδα.
             </span>
         </div>
     </div>
@@ -71,7 +68,8 @@
             με άλλους χρήστες και να έχετε τη δυνατότητα να κάνετε και εσείς μια ανάρτηση στην 
             ιστοσελίδα μας.
             <br>
-            More info can be found by clicking the support button, top left corner.
+            Περισσότερες πληροφορίες μπορούν να βρεθούν κάνοντας κλικ στο κουμπί "support", 
+            στην πάνω αριστερή γωνία.
         </span>
 	</div>
     <script src="themes.js"></script>

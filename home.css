@@ -27,7 +27,8 @@ h1{
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    border-bottom: 1.7px solid var(--bg-three);
+    border-bottom: 2px solid var(--bg-three);
+    animation: idle 5s infinite ease-in-out;
     color: var(--bg-three);
     width: 440px;
 }

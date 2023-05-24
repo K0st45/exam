@@ -127,7 +127,7 @@ if(isset($_POST["questions"])){
                 
             ?>
     </div>
-    <div class="some">The search results are going to be show here.</div>
+    <div class="some">The questions are going to be show here.</div>
 
     <script src="themes.js"></script>
 </body>

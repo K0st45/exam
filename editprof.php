@@ -41,6 +41,7 @@
         <span class="open">Change username :</span>
         <input class="animated-input" type="text" name="username" placeholder="<?php echo $_SESSION["username"]; ?>"><br>
         <input class="btn" type="submit" name="change" value="Change user data">
+        <!--<input class="btn" type="submit" name="delete" value="Delete account">-->
     </form>
     <div class="mnu">
         <button class="une" onclick="location.href='profile.php'">Back</button>
@@ -125,6 +126,30 @@
             $_SESSION["username"] = $row["username"];
             header("location: profile.php");
         }
+
+        /*if (isset($_POST["delete"])) {
+            // Generate a random sequence of letters
+            $letters = 'ABCDEFGHIJKLMNOPQRSTUVW';
+            $deletedspace = str_shuffle($letters);
+    
+            $ToDelete = $_SESSION["username"];
+            // Update the user's information with the random sequence as a placeholder
+            $sql = "UPDATE personal_data
+                    SET first_name = '$deletedspace', last_name = '$deletedspace', username = '$deletedspace', email = '$deletedspace'
+                    WHERE username = '$ToDelete'";
+
+            $sql2 = " UPDATE question_data SET username = '$deletedspace' WHERE username = '$ToDelete' ";
+
+            $sql3 = " UPDATE answer_data SET username = '$deletedspace' WHERE username = '$ToDelete' ";
+    
+            mysqli_query($conn, $sql);
+            //+mysqli_query($conn, $sql2);
+            //mysqli_query($conn, $sql3);
+    
+            // Destroy the session and redirect to the index page
+            session_destroy();
+            header("Location: planet.php");
+        }*/
     }
 
 mysqli_close($conn);
