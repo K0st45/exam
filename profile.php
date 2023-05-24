@@ -50,13 +50,13 @@
                         <p><?php echo "{$_SESSION['email']}"; ?></p>
                     </div>
                     <div class="data">
-                    <h4>Phone</h4>
+                    <!--<h4>Phone</h4>
                         <p>0001-213-998761</p>
-                    </div>
+                    </div>-->
                 </div>
             </div>
       
-            <div class="projects">
+            <!--<div class="projects">
                 <h3>Projects</h3>
                 <div class="projects_data">
                     <div class="data">
@@ -68,7 +68,7 @@
                         <p>dolor sit amet.</p>
                     </div>
                 </div>
-            </div>
+            </div>-->
         </div>
     </div>
 
