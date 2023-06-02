@@ -108,7 +108,8 @@ if(isset($_POST["questions"])){
     <div class="searched">
             <?php 
                 if(isset($_POST["search-input"])){
-                    $searchinput = $_POST["search-input"];
+                    $searchinput = filter_input(INPUT_POST, "search-input", FILTER_SANITIZE_SPECIAL_CHARS);
+                    
 
                     $sql = "SELECT * FROM question_data WHERE username LIKE '%$searchinput%' OR title LIKE '%$searchinput%' OR question LIKE '%$searchinput%'";
                     
@@ -117,7 +118,8 @@ if(isset($_POST["questions"])){
 
                     if(mysqli_num_rows($result) > 0){
                         while($row = mysqli_fetch_assoc($result)){
-                            echo "<div class='ress'><a href='answear.php?title={$row["title"]}'> <p class='result'>User: {$row['username']} <br> About: {$row['title']}</p> <br> <p class='result2'>Question: {$row['question']}</p> </a></div>";
+                            echo "<div class='ress'><a href='answear.php?title={$row["title"]}'> <p class='result'>User: {$row['username']} <br> About: {$row['title']}</p> <br>
+                                  <p class='result2'>Question: {$row['question']}</p> <p class='result'>{$row['submit_time']}</p> </a></div>";
                             
                         }
 
